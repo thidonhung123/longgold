@@ -10,8 +10,21 @@
     .avatar { width: 200px; height: 200px; border-radius: 50%; margin-top: 30px; border: 4px solid gold; object-fit: cover; }
     h1 { color: gold; margin-top: 20px; }
     .btn { background-color: gold; color: black; padding: 15px 25px; border-radius: 10px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; }
-    .section { max-width: 700px; margin: auto; padding: 30px; line-height: 1.6; }
-    .course-img { width: 90%; border-radius: 15px; margin: 30px auto; border: 2px solid gold; }
+    .section { max-width: 700px; margin: auto; padding: 10px; line-height: 1.6; }
+    .course-img {
+    width: 70%;              /* smaller than before (was 90%) */
+    max-width: 700px;        /* never exceed 400px width */
+    height: auto;            /* keeps aspect ratio */
+    display: block;          /* centers easily */
+    margin: 30px auto;       /* center horizontally */
+    border-radius: 15px;
+    border: 2px solid gold;
+    transition: transform 0.3s ease; /* smooth scaling effect */
+}
+
+.course-img:hover {
+    transform: scale(1.05);  /* slightly zoom when hovering */
+}
 </style>
 </head>
 <body>
@@ -31,7 +44,6 @@ Tôi giúp người mới bắt đầu xây dựng kinh doanh online từ con s�
 <b>Triết lý của tôi:</b><br>
 Học là phải ra kết quả — Bán hàng là phải thực tế.
 </p>
-
 <a class="btn" href="https://www.facebook.com/DoDangLong79" target="_blank">Bạn muốn kinh doanh online hiệu quả? Hãy bắt đầu tại đây ✅</a>
 </div>
 
